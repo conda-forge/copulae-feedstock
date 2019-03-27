@@ -10,7 +10,7 @@ source:
   sha256: 6bdf53472d5e9fcf72760eb4da4da12c379501db5736c1536edf2d1e62a86d7c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:  "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -45,7 +45,7 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: Python copulae library for dependency modelling
-  doc_url: https://readthedocs.org/projects/copulae/
+  doc_url: https://copulae.readthedocs.io/en/latest
   dev_url: https://github.com/DanielBok/copulae
 
 extra:
