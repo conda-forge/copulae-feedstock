@@ -10,7 +10,7 @@ source:
   sha256: aa25d27a0d9bb1b4b0a1cd4cb7a64b8b3bc52f67a1ce988f690bff6f5f7be38d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:  "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -19,6 +19,7 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - numba >=0.43
     - numpy >=1.15
     - pandas >=0.23
     - python >=3.6
