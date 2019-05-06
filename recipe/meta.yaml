@@ -10,21 +10,26 @@ source:
   sha256: 66f0b015ff82ef9ec491a17cb314f02ddc46372eb1ab3cc75135ed0ea536008a
 
 build:
-  number: 0
+  number: 1
   script:  "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
-    - pip
     - python >=3.6
-    - cython >=0.29
-    - numpy >=1.15
+    - cython
+    - pip
+    - numpy 1.14.*  # [py==37]
+    - numpy 1.12.*  # [py!=37]
   run:
     - {{ pin_compatible('numpy') }}
-    - pandas >=0.23
+    - pandas
     - python >=3.6
-    - scipy >=1.1
-    - statsmodels >=0.9
+    - numpy
+    - scipy
+    - statsmodels
 
 test:
   imports:
