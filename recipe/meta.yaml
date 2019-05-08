@@ -19,18 +19,17 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python >=3.6
+    - python
     - cython
     - pip
     - numpy 1.14.*  # [py==37]
     - numpy 1.12.*  # [py!=37]
   run:
-    - numpy
-    - pandas
-    - python >=3.6
-    - numpy
-    - scipy
-    - statsmodels
+    - pandas >=0.24
+    - python
+    - numpy >=1.15
+    - scipy >=1.1
+    - statsmodels >=0.9
 
 test:
   imports:
