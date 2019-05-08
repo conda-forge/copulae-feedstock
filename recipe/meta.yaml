@@ -8,17 +8,17 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 66f0b015ff82ef9ec491a17cb314f02ddc46372eb1ab3cc75135ed0ea536008a
-  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
 
 build:
   number: 3
   skip: true  # [py<36] 
+  script:  "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python >=3.6
+    - python
     - cython
     - pip
     - numpy 1.14.*  # [py==37]
@@ -26,7 +26,7 @@ requirements:
   run:
     - numpy
     - pandas
-    - python >=3.6
+    - python
     - numpy
     - scipy
     - statsmodels
