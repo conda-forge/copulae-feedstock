@@ -10,3 +10,6 @@ docker_image:
 - condaforge/linux-anvil-comp7
 numpy:
 - '1.9'
+python:
+- '3.6'
+- '3.7'
