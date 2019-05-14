@@ -10,9 +10,12 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      osx_:
-        CONFIG: osx_
-        UPLOAD_PACKAGES: True
+      osx_python36:
+        CONFIG: osx_python36
+        UPLOAD_PACKAGES: False
+      osx_python37:
+        CONFIG: osx_python36
+        UPLOAD_PACKAGES: False
 
   steps:
   # TODO: Fast finish on azure pipelines?

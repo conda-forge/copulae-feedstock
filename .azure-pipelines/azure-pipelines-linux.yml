@@ -10,9 +10,12 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_:
-        CONFIG: linux_
-        UPLOAD_PACKAGES: True
+      linux_python36:
+        CONFIG: linux_python36
+        UPLOAD_PACKAGES: False
+      linux_python37:
+        CONFIG: linux_python37
+        UPLOAD_PACKAGES: False
   steps:
   - script: |
       sudo pip install --upgrade pip
