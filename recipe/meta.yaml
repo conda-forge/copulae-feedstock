@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} setup.py install --single-version-externally-managed --record=record.txt
-  skip: true  # [py<37]
+  skip: true  # [py<36]
 
 
 requirements:
@@ -25,10 +25,11 @@ requirements:
     - numpy >=1.14
     - scipy
   run:
-    - pandas >=0.24
+    - pandas >=0.23
     - python
     - {{ pin_compatible('numpy') }}
     - scipy >=1.1
+    - scikit-learn >=0.23
     - statsmodels >=0.9
 
 test:
@@ -42,6 +43,7 @@ test:
     - copulae.empirical
     - copulae.gof
     - copulae.indep
+    - copulae.mixtures
     - copulae.special
     - copulae.stats
     - copulae.utility
