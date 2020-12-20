@@ -25,13 +25,15 @@ requirements:
     - numpy >=1.14
     - scipy
   run:
+    - {{ pin_compatible('numpy') }}
     - pandas >=0.23
     - python
-    - {{ pin_compatible('numpy') }}
     - scipy >=1.1
     - scikit-learn >=0.23
     - statsmodels >=0.9
     - typing-extensions >=3.7.4.2  # [py<38]
+    - wheel
+    - wrapt
 
 test:
   imports:
