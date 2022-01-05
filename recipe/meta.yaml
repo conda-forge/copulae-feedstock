@@ -1,5 +1,5 @@
 {% set name = "copulae" %}
-{% set version = "0.7.6" %}
+{% set version = "0.7.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1fabe5dc3b6576d419ee5675ac759af48de989cf62bb5c4a15dee8d6b69d4650
+  sha256: 0f1ff2d0a538b3b7c9270955782caeac289165db589bfc06c889fa4f6590a6be
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} setup.py install --single-version-externally-managed --record=record.txt
   skip: true  # [py<36]
 
