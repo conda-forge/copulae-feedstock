@@ -1,11 +1,11 @@
-About copulae
-=============
+About copulae-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/copulae-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/DanielBok/copulae
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/copulae-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python copulae library for dependency modelling
 
